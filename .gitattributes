@@ -1,0 +1,5 @@
+* text=auto
+# Bash scripts break with Windows line endings; cmd scripts want them.
+*.sh text eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+*.token
+config/*.toml
+!config/examples/*.toml
+.env
+node_modules/
+.next/
+voice-page/web/.env.local

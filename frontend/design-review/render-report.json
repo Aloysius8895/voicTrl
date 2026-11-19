@@ -1,0 +1,169 @@
+{
+  "when": "2026-11-18T20:18:00.816Z",
+  "passed": 26,
+  "failed": 0,
+  "checks": [
+    {
+      "ok": true,
+      "what": "phone idle: no sideways scroll at 390px (page is 390px wide)"
+    },
+    {
+      "ok": true,
+      "what": "Urbanist font loaded from the app itself"
+    },
+    {
+      "ok": true,
+      "what": "idle: the call button is on the first screen"
+    },
+    {
+      "ok": true,
+      "what": "phone: every button is at least 44px tall"
+    },
+    {
+      "ok": true,
+      "what": "phone listening: no sideways scroll at 390px (page is 390px wide)"
+    },
+    {
+      "ok": true,
+      "what": "phone waking: no sideways scroll at 390px (page is 390px wide)"
+    },
+    {
+      "ok": true,
+      "what": "phone building: no sideways scroll at 390px (page is 390px wide)"
+    },
+    {
+      "ok": true,
+      "what": "building: exactly one step is executing"
+    },
+    {
+      "ok": true,
+      "what": "building: the tool name is shown"
+    },
+    {
+      "ok": true,
+      "what": "phone confirm: no sideways scroll at 390px (page is 390px wide)"
+    },
+    {
+      "ok": true,
+      "what": "confirm: pressing Confirm finishes the task"
+    },
+    {
+      "ok": true,
+      "what": "phone confirm: no sideways scroll at 390px (page is 390px wide)"
+    },
+    {
+      "ok": true,
+      "what": "phone done: no sideways scroll at 390px (page is 390px wide)"
+    },
+    {
+      "ok": true,
+      "what": "done: all four pieces of evidence are filled in"
+    },
+    {
+      "ok": true,
+      "what": "live: pressing Call starts the call (Hang up appears)"
+    },
+    {
+      "ok": true,
+      "what": "live: Hang up ends the call and offers Call again"
+    },
+    {
+      "ok": true,
+      "what": "desktop idle: no sideways scroll at 1440px (page is 1440px wide)"
+    },
+    {
+      "ok": true,
+      "what": "desktop building: no sideways scroll at 1440px (page is 1440px wide)"
+    },
+    {
+      "ok": true,
+      "what": "desktop: the three panels sit side by side (tops 110, 110, 110)"
+    },
+    {
+      "ok": true,
+      "what": "desktop confirm: no sideways scroll at 1440px (page is 1440px wide)"
+    },
+    {
+      "ok": true,
+      "what": "PWA: manifest says voicTrl, full screen"
+    },
+    {
+      "ok": true,
+      "what": "PWA: has a 512px icon"
+    },
+    {
+      "ok": true,
+      "what": "PWA: service worker is running (works offline after the first visit)"
+    },
+    {
+      "ok": true,
+      "what": "video: recorded a whole sample run"
+    },
+    {
+      "ok": true,
+      "what": "no requests left this computer"
+    },
+    {
+      "ok": true,
+      "what": "no errors in the page"
+    }
+  ],
+  "shots": [
+    {
+      "file": "01-phone-idle.png",
+      "note": "Before the call: one big call button"
+    },
+    {
+      "file": "02-phone-idle-task.png",
+      "note": "Before the call: empty task, with an example of what to say"
+    },
+    {
+      "file": "03-phone-listening.png",
+      "note": "On the call: the assistant listens, last two lines as subtitles"
+    },
+    {
+      "file": "04-phone-waking.png",
+      "note": "Step 2 running: the tool the assistant picked and its progress"
+    },
+    {
+      "file": "05-phone-building.png",
+      "note": "Step 4 running: Claude Code builds the page on Laptop B"
+    },
+    {
+      "file": "06-phone-confirm.png",
+      "note": "Last step waits for you: Confirm or Cancel"
+    },
+    {
+      "file": "07-phone-devices.png",
+      "note": "Devices: both laptops online, one thing needs you"
+    },
+    {
+      "file": "08-phone-evidence.png",
+      "note": "Evidence of the run: wake times, file hash, run code"
+    },
+    {
+      "file": "09-phone-done.png",
+      "note": "All five steps done"
+    },
+    {
+      "file": "10-phone-full-page.png",
+      "note": "The whole page on a phone, after the run"
+    },
+    {
+      "file": "11-desktop-idle.png",
+      "note": "Wide screen, before the call"
+    },
+    {
+      "file": "12-desktop-building.png",
+      "note": "Wide screen: call, steps and devices side by side"
+    },
+    {
+      "file": "13-desktop-confirm.png",
+      "note": "Wide screen: waiting for your confirmation"
+    },
+    {
+      "file": "demo.webm",
+      "note": "One whole sample run on a phone (about 45 s)"
+    }
+  ]
+}

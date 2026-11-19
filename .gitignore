@@ -1,0 +1,33 @@
+# Not part of this project: copies of other people's repos and sites, and unrelated work.
+# Their licences don't allow republishing, or they hold personal data. See README.md.
+/Copy/
+/data/
+/idea/
+/templete/
+
+# Secrets: only the *.example files are committed.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.token
+
+# Dependencies, builds, caches
+node_modules/
+.venv/
+dist/
+dist-ssr/
+dev-dist/
+.next/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.tsbuildinfo
+*.log
+
+# Local machine files
+.claude/settings.local.json
+.DS_Store
+Thumbs.db

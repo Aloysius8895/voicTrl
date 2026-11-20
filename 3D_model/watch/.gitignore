@@ -1,0 +1,5 @@
+# Blender's automatic backup
+*.blend1
+# Contains Espressif's official product photos next to our renders: not ours to republish.
+# Rebuild it with blender/compare_sheet.py once the photos are in pic/ref/.
+shots/compare.png

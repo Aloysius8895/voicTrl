@@ -1,0 +1,16 @@
+{
+  "name": "voictrl-watch-viewer",
+  "private": true,
+  "type": "module",
+  "description": "Web page for looking at the voicTrl watch model",
+  "scripts": {
+    "build": "esbuild src/viewer.js --bundle --format=iife --minify --legal-comments=inline --outfile=viewer.bundle.js",
+    "test": "node --test test/viewer.test.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

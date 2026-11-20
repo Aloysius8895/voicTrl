@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>voicTrl 手表</title>
+<style>
+  :root { --ink: #f5f1ed; --dim: #968c85; --orange: #ff5a1f; --panel: rgba(28, 23, 20, 0.72); --line: rgba(245, 241, 237, 0.14); }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body { background: #0b0b0c; color: var(--ink); font: 15px/1.5 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif; overflow: hidden; }
+  #stage { position: fixed; inset: 0; }
+  #stage canvas { display: block; touch-action: none; }
+  header { position: fixed; top: 20px; left: 24px; pointer-events: none; }
+  header h1 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: 0.01em; }
+  header p { margin: 2px 0 0; color: var(--dim); font-size: 13px; }
+  #status { position: fixed; inset: 0; display: grid; place-items: center; color: var(--dim); pointer-events: none; }
+  #status[hidden] { display: none; }
+  #panel { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); display: flex; align-items: center; gap: 14px;
+           padding: 12px 20px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+  #panel label { font-size: 13px; color: var(--dim); white-space: nowrap; }
+  #explode { width: min(40vw, 320px); accent-color: var(--orange); }
+  #panel .switch { display: flex; align-items: center; gap: 6px; padding-left: 14px; border-left: 1px solid var(--line); color: var(--ink); cursor: pointer; }
+  #wearable { accent-color: var(--orange); width: 16px; height: 16px; margin: 0; }
+  #part { position: fixed; top: 20px; right: 24px; width: min(300px, 44vw); padding: 14px 18px; border-radius: 18px;
+          background: var(--panel); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+  #part[hidden] { display: none; }
+  #part-name { margin: 0; font-size: 18px; font-weight: 600; }
+  #part-id { margin: 2px 0 0; font: 12px/1.4 Consolas, monospace; color: var(--orange); }
+  #part-note { margin: 8px 0 0; font-size: 13px; color: var(--dim); }
+  #part-note:empty { display: none; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<header>
+  <h1>voicTrl 手表</h1>
+  <p>ESP-Mosaico V1.2 加自制托架和表带 · 拖动旋转，滚轮缩放，点零件看它是什么</p>
+</header>
+<div id="panel">
+  <label for="explode">组装</label>
+  <input id="explode" type="range" min="0" max="1" step="0.01" value="0" aria-label="拆解程度">
+  <label for="explode">拆开</label>
+  <label class="switch"><input id="wearable" type="checkbox" checked> 托架和表带</label>
+</div>
+<aside id="part" hidden>
+  <p id="part-name"></p>
+  <p id="part-id"></p>
+  <p id="part-note"></p>
+</aside>
+<div id="status">正在加载模型…</div>
+<script src="watch.glb.js"></script>
+<script src="viewer.bundle.js"></script>
+</body>
+</html>
